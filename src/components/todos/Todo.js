@@ -2,7 +2,11 @@ import React from 'react';
 
 const Todo = props => {
   return (
-    <li>{props.text}</li>
+    <div>
+      <li>{props.todo.text}</li>
+      <button onClick={() => props.deleteTodo(props.todo.id)}>delete</button>
+    </div>
+    
   );
 };
 
